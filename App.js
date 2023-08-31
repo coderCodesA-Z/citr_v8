@@ -1,26 +1,31 @@
-const Pet = () => {
-	return React.createElement(
-		"div",
-		{}, // null also works instead of an empty object
-		[
-			React.createElement("h1", {}, "Luna"),
-			React.createElement("h2", {}, "Dog"),
-			React.createElement("h2", {}, "Havanese"),
-		]
-	);
+const Pet = (props) => {
+	// react supports one way data binding using props
+	return React.createElement("div", {}, [
+		React.createElement("h1", {}, props.name),
+		React.createElement("h2", {}, props.animal),
+		React.createElement("h2", {}, props.breed),
+	]);
 };
 
 const App = () => {
-	return React.createElement(
-		"div",
-		{}, // null also works instead of an empty object
-		[
-			React.createElement("h1", {}, "Adopt Me!"),
-			React.createElement(Pet),
-			React.createElement(Pet),
-			React.createElement(Pet),
-		]
-	);
+	return React.createElement("div", {}, [
+		React.createElement("h1", {}, "Adopt Me!"),
+		React.createElement(Pet, {
+			name: "Luna",
+			animal: "Dog",
+			breed: "Havanese",
+		}),
+		React.createElement(Pet, {
+			name: "Pepper",
+			animal: "Bird",
+			breed: "Cockatiel",
+		}),
+		React.createElement(Pet, {
+         name: "Doink",
+         animal: "Cat",
+         breed: "Mix",
+      }),
+	]);
 };
 
 const container = document.getElementById("root");
