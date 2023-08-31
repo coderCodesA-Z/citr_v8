@@ -1,0 +1,21 @@
+{
+  "name": "citr_v8",
+  "version": "1.0.0",
+  "description": "- Code for Complete Intro To React v8 - link: [https://react-v8.holt.courses/]",
+  "main": "App.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3",
+    "vite": "^4.4.9"
+  }
+}
