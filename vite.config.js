@@ -1,6 +1,6 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 export default defineConfig({
-    plugins: [react()],
-    root: "src", // if index.html is already in the root directory then explicit mentioning is not reqd.
-}
+  plugins: [react()],
+  root: "src",
+});
