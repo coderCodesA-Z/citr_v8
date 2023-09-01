@@ -4,11 +4,10 @@ import SearchParams from "./SearchParams";
 
 const App = () => (
   <>
-    <Link to={"/"}>
-      <div>
-        <h1>Adopt Me!</h1>
-      </div>
-    </Link>
+    <header>
+      <Link to={"/"}>Adopt Me!
+      </Link>
+    </header>
     <Routes>
       <Route path="/" element={<SearchParams />} />
       <Route path="/details/:id" element={<Details />} />
