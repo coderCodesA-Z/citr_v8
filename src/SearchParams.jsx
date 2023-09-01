@@ -71,7 +71,7 @@ const SearchParams = () => {
             disabled={!breeds.length}
             id="breed"
             value={breed}
-            onChange={(e) => setBreed(e.target.value)} // e: synthetic DOM event
+            onChange={(e) => setBreed(e.target.value)} 
             onBlur={(e) => setBreed(e.target.value)}
           >
             <option value="" disabled defaultValue={true}>

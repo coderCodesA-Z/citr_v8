@@ -8,8 +8,6 @@ const Pet = (props) => {
     hero = images[0];
   }
 
-
-  // a tag does a full page refresh which is not great, Link does not
   return (
     <Link to={`/details/${id}`} className="pet">
       <div className="image-container">

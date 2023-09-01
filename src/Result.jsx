@@ -22,10 +22,4 @@ const Results = ({ pets }) => {
   );
 };
 
-// {...pet}: quite implicit, if the result of the api changes things may break
-// instead explicitly extracting out property values is more safe
-
-// But there may be cases where spreading objects can be useful, eg.: when additional property needs
-// to be added to the object without affecting the old stuffs present
-
 export default Results;

@@ -5,8 +5,7 @@ import SearchParams from "./SearchParams";
 const App = () => (
   <>
     <header>
-      <Link to={"/"}>Adopt Me!
-      </Link>
+      <Link to={"/"}>Adopt Me!</Link>
     </header>
     <Routes>
       <Route path="/" element={<SearchParams />} />
