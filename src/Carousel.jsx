@@ -9,9 +9,13 @@ class Carousel extends Component {
     images: ["http://pets-images.dev-apis.com/pets/none.jpg"],
   };
 
-  // class components are ought to have a render()
+  handleIndexClick = (event) => {
+    this.setState({
+      active: +event.target.dataset.index,
+    });
+  };
+
   render() {
-    // render() doesn't necessarily have to return a markup always.
     const { active } = this.state;
     const { images } = this.props;
     return (
@@ -19,9 +23,12 @@ class Carousel extends Component {
         <img src={images[active]} alt="animal-hero" />
         <div className="carousel-smaller">
           {images.map((photo, index) => (
+            // eslint-disable-next-line
             <img
+              onClick={this.handleIndexClick}
               key={photo}
               src={photo}
+              data-index={index}
               className={index === active ? "active" : ""}
               alt="animal-thumbnail"
             />
@@ -31,5 +38,15 @@ class Carousel extends Component {
     );
   }
 }
+
+/**
+ * to use hooks with class components, make use of higher order components
+ * example:
+ * function carouselParent({ animal }) {
+ * const [breedList] = useBreedList(animal);
+ * return <Carousel breedList={breedList} />;
+ * }
+ * export default carouselParent;
+ */
 
 export default Carousel;
